@@ -3,6 +3,7 @@
  */
 public class Sudoku {
 public static int[][] griglia=new int[9][9];
+private static boolean[] contatoreValori= new boolean{false, false, false, false, false, false, false, false, false};
 public static void main(String[] args) {
     costruisciGriglia();
     for(int i=0; i<griglia.length; ++i){
@@ -26,6 +27,10 @@ public static void main(String[] args) {
                 while (!(verifica(i, j, questoQuadrato))) {
                     questoQuadrato=generaRandom();
                     System.out.println("in costruisciGriglia, ciclo while di verifica; numrandom"+questoQuadrato);//debug
+                    if (checkContatore()){
+                        i-1;
+                        
+                    }
                 }     
                 griglia[i][j]=questoQuadrato;
                 System.out.println("in costruisciGriglia,esco ciclo while di verifica e do valore "+questoQuadrato);  //debug                
