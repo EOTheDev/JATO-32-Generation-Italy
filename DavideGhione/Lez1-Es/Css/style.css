@@ -1,3 +1,5 @@
+/*font-face:url risorsa*/
+
 header{
     text-align: center;
     color: white;
@@ -5,33 +7,71 @@ header{
 }
 
 p{
-    color: red; /*TODO*/
+    color: greenyellow; /*TODO*/
     display: inline-block;
     width: 75%;
-}
-
 
 }
-div>div{
-    min-height: 100px;
-    width: 200px;
+.scena1{
+    background-color: rgb(246, 255, 255);
+}
+
+}
+.battuta>div{
+    height: 150px;
     background-size: cover;
     display: inline-block;
+    width: 20%;
 }
-.scena1>div{
+.battuta{
     width: 100%;
-    background-color: lightblue;
+   /* background-color: lightblue;*/
+}
+.scena1 .battuta:nth-child(even){
+    background-color:rgb(180, 157, 184);
+    
+    
+}
+.battuta:nth-child(even) p{
+/*color: black;*/
+text-align: right;
+}
+.scena2 .battuta:nth-child(even){
+    background-color:rgb(118, 112, 138);
+       
 }
 
+
+
+
 .D3B0{
-    background-image: url(/Lez1-Es/Assets/D3b0.jpg);
+    color: gold;
 }
 .UffImp{
-    background-image: url(/Lez1-Es/Assets/UffImp.jpg);
+    color: #3a4e4d;
 }
 .Darth{
-    background-image: url(/Lez1-Es/Assets/Darth.jpg);
+    color: #9c1f25;
 }
 .Ribelle{
-    background-image: url(/Lez1-Es/Assets/Soldato.jpg);
+    color:#304705
+}
+.Soldato{
+    color: #d0ff00;
+    /*background-color: darkgrey;*/
+}
+.CapitanoCapo{
+    color: #191921;
+}
+.Capitano{
+    color: #9b7659;
+}
+.Leila{
+    color: #f4a2e6;
+}
+.Comandante{
+    color: #301224;
+}
+.Uff2{
+    color: #41f5e1;
 }
