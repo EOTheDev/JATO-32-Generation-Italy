@@ -1,0 +1,37 @@
+header{
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+p{
+    color: red; /*TODO*/
+    display: inline-block;
+    width: 75%;
+}
+
+
+}
+div>div{
+    min-height: 100px;
+    width: 200px;
+    background-size: cover;
+    display: inline-block;
+}
+.scena1>div{
+    width: 100%;
+    background-color: lightblue;
+}
+
+.D3B0{
+    background-image: url(/Lez1-Es/Assets/D3b0.jpg);
+}
+.UffImp{
+    background-image: url(/Lez1-Es/Assets/UffImp.jpg);
+}
+.Darth{
+    background-image: url(/Lez1-Es/Assets/Darth.jpg);
+}
+.Ribelle{
+    background-image: url(/Lez1-Es/Assets/Soldato.jpg);
+}
