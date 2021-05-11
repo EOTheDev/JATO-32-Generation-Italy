@@ -23,10 +23,10 @@ public static void main(String[] args) {
         int questoQuadrato=generaRandom();
         for (int i=0; i<griglia.length; i++){
             for (int j=0; j<griglia[0].length; j++){
-                //while (!(verifica(i, j, questoQuadrato))) {
+                while (!(verifica(i, j, questoQuadrato))) {
                     questoQuadrato=generaRandom();
-                    //System.out.println("in costruisciGriglia, ciclo while di verifica; numrandom"+questoQuadrato);//debug
-                //}     
+                    System.out.println("in costruisciGriglia, ciclo while di verifica; numrandom"+questoQuadrato);//debug
+                }     
                 griglia[i][j]=questoQuadrato;
                 System.out.println("in costruisciGriglia,esco ciclo while di verifica e do valore "+questoQuadrato);  //debug                
 
@@ -36,9 +36,9 @@ public static void main(String[] args) {
     private static boolean verifica(int riga, int colonna, int questoQuadrato) {
         if (verificaRiga(riga, colonna, questoQuadrato)){
             if (verificaColonna(riga, colonna, questoQuadrato)){
-                if (verificaQuadrante(riga, colonna, questoQuadrato)) {
+                //if (verificaQuadrante(riga, colonna, questoQuadrato)) {
                     return true;
-                }
+                //}
             }
         }
         return false;
