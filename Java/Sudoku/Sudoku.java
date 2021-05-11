@@ -18,13 +18,16 @@ public static void main(String[] args) {
     }
     //todo costruisciGriglia()
     public static void costruisciGriglia() {
+        System.out.println("entro in costruisciGriglia");
         int questoQuadrato=generaRandom();
         for (int i=0; i<griglia.length; i++){
             for (int j=0; j<griglia[0].length; j++){
                 while (!(verifica(i, j, questoQuadrato))) {
                     questoQuadrato=generaRandom();
+                    System.out.println("in costruisciGriglia, ciclo while di verifica; numrandom"+questoQuadrato);
                 }     
-                griglia[i][j]=questoQuadrato;                          
+                griglia[i][j]=questoQuadrato;
+                System.out.println("in costruisciGriglia,esco ciclo while di verifica e do valore "+questoQuadrato);                  
 
             }
         }
