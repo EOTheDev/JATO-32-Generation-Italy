@@ -8,8 +8,9 @@ public static void main(String[] args) {
     for(int i=0; i<griglia.length; ++i){
         System.out.println();
         for(int j=0; i<griglia[0].length; ++i){
-            System.out.print(griglia[i][j]+"\t");
+            System.out.print("|\t"+griglia[i][j]+"\t |");
         }
+        
     }
 }
     // metodo generarandom 
@@ -18,16 +19,16 @@ public static void main(String[] args) {
     }
     //todo costruisciGriglia()
     public static void costruisciGriglia() {
-        System.out.println("entro in costruisciGriglia");
+        System.out.println("entro in costruisciGriglia");//debug
         int questoQuadrato=generaRandom();
         for (int i=0; i<griglia.length; i++){
             for (int j=0; j<griglia[0].length; j++){
-                while (!(verifica(i, j, questoQuadrato))) {
+                //while (!(verifica(i, j, questoQuadrato))) {
                     questoQuadrato=generaRandom();
-                    System.out.println("in costruisciGriglia, ciclo while di verifica; numrandom"+questoQuadrato);
-                }     
+                    //System.out.println("in costruisciGriglia, ciclo while di verifica; numrandom"+questoQuadrato);//debug
+                //}     
                 griglia[i][j]=questoQuadrato;
-                System.out.println("in costruisciGriglia,esco ciclo while di verifica e do valore "+questoQuadrato);                  
+                System.out.println("in costruisciGriglia,esco ciclo while di verifica e do valore "+questoQuadrato);  //debug                
 
             }
         }
