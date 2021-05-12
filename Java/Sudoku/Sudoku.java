@@ -3,7 +3,8 @@
  */
 public class Sudoku {
 public static int[][] griglia=new int[9][9];
-private static boolean[] contatoreValori= new boolean{false, false, false, false, false, false, false, false, false};
+private static boolean[] contatoreValori= {false, false, false, false, false, false, false, false, false};
+private static int loading=0;
 public static void main(String[] args) {
     costruisciGriglia();
     for(int i=0; i<griglia.length; ++i){
@@ -20,25 +21,63 @@ public static void main(String[] args) {
     }
     //todo costruisciGriglia()
     public static void costruisciGriglia() {
-        System.out.println("entro in costruisciGriglia");//debug
+        //System.out.println("entro in costruisciGriglia");//debug
         int questoQuadrato=generaRandom();
         for (int i=0; i<griglia.length; i++){
             for (int j=0; j<griglia[0].length; j++){
                 while (!(verifica(i, j, questoQuadrato))) {
+                    addToContatore(questoQuadrato);
                     questoQuadrato=generaRandom();
-                    System.out.println("in costruisciGriglia, ciclo while di verifica; numrandom"+questoQuadrato);//debug
                     if (checkContatore()){
-                        i-1;
-                        
+                        azzeraContatore();
+                        //System.out.println("in costruisciGriglia, checkContatore is true; riga: "+i+" colonna: "+j);//debug
+                        if (i>1){
+                            //System.out.println("in costruisciGriglia, i>1 is true; prima di operazione riga: "+i+" colonna: "+j);//debug
+                            i= i-1;
+                            //System.out.println("in costruisciGriglia, i>1 is true; dopo operazione riga: "+i+" colonna: "+j);//debug
+                        } else { 
+                            if(j>1){
+                            //System.out.println("in costruisciGriglia, j>1 is true; riga: "+i+" prima di operazione colonna: "+j);//debug
+                            j= j-1;
+                            //System.out.println("in costruisciGriglia, j>1 is true; riga: "+i+" dopo operazione colonna: "+j);//debug
+                            } else {
+                                costruisciGriglia();
+                            }
+                        }
                     }
+                    //System.out.println("in costruisciGriglia, ciclo while di verifica; numrandom"+questoQuadrato);//debug
                 }     
+                azzeraContatore();
                 griglia[i][j]=questoQuadrato;
-                System.out.println("in costruisciGriglia,esco ciclo while di verifica e do valore "+questoQuadrato);  //debug                
+                //System.out.println("VERIFICATA RIGA,sono uscito!! e \tdo valore "+questoQuadrato);  //debug    
+                loading=loading+10;
+                System.out.println("Sto generando, per favore, attendi \tLOADING: "+loading+"%");  //LOADING             
 
             }
         }
     } 
-    private static boolean verifica(int riga, int colonna, int questoQuadrato) {
+    
+    private static void azzeraContatore() {
+        for (int i=0; i<contatoreValori.length; i++){
+            contatoreValori[i]=false;
+        }
+    }
+    private static void addToContatore(int questoQuadrato) { //segna al contatore questoQuadrato come true
+        contatoreValori[questoQuadrato-1]=true;
+    }
+    private static boolean checkContatore() { //return true se sono passati tutti i num da 1 a 9
+        int contatore=0;
+        for (int i=0; i<contatoreValori.length; i++) {
+            if (contatoreValori[i]==true){
+                contatore++;
+            } else { //if false
+                return false;
+            }
+        }
+    //    if (contatore==9)
+        return true;
+    }
+    private static boolean verifica(int riga, int colonna, int questoQuadrato) { //return false se il num si ripete, altrimenti true
         if (verificaRiga(riga, colonna, questoQuadrato)){
             if (verificaColonna(riga, colonna, questoQuadrato)){
                 //if (verificaQuadrante(riga, colonna, questoQuadrato)) {
@@ -51,8 +90,11 @@ public static void main(String[] args) {
 
     //todo bool verifica riga
     private static boolean verificaRiga(int riga, int colonna, int questoQuadrato) {
+        //System.out.println(riga+" riga "+colonna+" colonna "+questoQuadrato+"questo quadrato");//debug
+        //System.out.println("Stampo "+riga+" riga "+"x colonna "+questoQuadrato+"questo quadrato");//debug
         for (int i=0; i<griglia.length; i++){
             if (questoQuadrato==griglia[riga][i]){
+                //System.out.print(""+riga+" riga "+i+" colonna "+questoQuadrato+"questo quadrato "+griglia[riga][i]+"elemento griglia");//debug
                 return false;
             }
         }
