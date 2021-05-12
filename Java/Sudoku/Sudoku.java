@@ -21,6 +21,7 @@ public static void main(String[] args) {
     }
     //todo costruisciGriglia()
     public static void costruisciGriglia() {
+        azzeraContatore();
         //System.out.println("entro in costruisciGriglia");//debug
         int questoQuadrato=generaRandom();
         for (int i=0; i<griglia.length; i++){
@@ -41,7 +42,9 @@ public static void main(String[] args) {
                             j= j-1;
                             //System.out.println("in costruisciGriglia, j>1 is true; riga: "+i+" dopo operazione colonna: "+j);//debug
                             } else {
+                                loading=0;
                                 costruisciGriglia();
+                                
                             }
                         }
                     }
