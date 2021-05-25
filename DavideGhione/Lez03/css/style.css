@@ -3,11 +3,10 @@
     box-sizing: border-box;
 }
 .wrapper{
-display: flex;
-flex-direction: column;
-
-
-
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; 
+    min-height: 100vh;
 }
 .logo img{
    width: 20rem;
@@ -53,16 +52,28 @@ flex-direction: column;
     width: 25%;
     border-color:green;
 }
-.wrapper{
-    margin: 0 auto;
-}
+
 .mainHeader{
     display: flex   ;
 }
 .mainContainer{
     display: flex;
+    flex-grow: 1;
 }
 .sideLeft, .sideRight{
     width: 25%;
     background-color: aqua;
+}
+.sideLeft{
+    order: 0;
+}
+.main{
+    order:1;
+}
+.sideRight{
+    order: 2;
+}
+
+footer{
+
 }
