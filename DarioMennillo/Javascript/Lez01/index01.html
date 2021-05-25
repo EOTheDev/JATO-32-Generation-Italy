@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Index 01 JS</title>
+</head>
+<body>
+    <h1>introduzione a JS</h1>
+    <p>collegare un file JS alla pagina</p>
+    <!-- ctrl + ù -->
+    <!-- <script>sempre prima della fine del body o della head</script> -->
+
+<h1>saluta utente</h1>
+<script type="text/javascript">
+//Codice in JS
+//string
+var nome="Dario";
+//number
+var numero=3;
+var pi=3.14;
+//boolean
+var testaCroce=false;
+
+
+console.log("Ciao "+nome)
+console.log(typeof nome)
+console.log("Ciao "+numero)
+console.log(typeof numero)
+console.log("Ciao "+pi)
+console.log(typeof pi)
+
+var imponibile=2500;
+const IVA=0.22;
+var prezzoIvato=(imponibile*IVA)+imponibile;
+var costoIVA=prezzoIvato-imponibile;
+console.log(imponibile);
+console.log(costoIVA);
+console.log(prezzoIvato);
+
+document.write("<p>Imponibile in €: "+imponibile+"<\p>"+"<p>IVA in €: "+imponibile+"<\p>"+"<p>Totale in €: "+prezzoIvato+"<\p>");
+
+
+if(prezzoIvato>3000){
+    document.write("<h1 class='aero'> Adesso paga, con calma     </h1>");
+} else {
+    document.write("<h1> Adesso paga</h1>");
+}
+//recupera input utente
+var nomeUtente=window.prompt("come ti chiami? ");
+document.write("<h3>Ciao "+nomeUtente+"</h3>");
+//alert
+window.alert("Ciao, sei appena stato salutato");
+
+
+
+</script>
+<!-- collegamento ad un file esterno -->
+<script src="js/script01.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+html{
+    /*height: 100%;
+
+    https://meyerweb.com/eric/tools/css/reset/
+    
+    
+    */
+}
+body{
+    margin:0;background: url('/Lez2/assets/20210412_172647.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.wrapper{
+    background-color: chartreuse;
+    width: 50%;
+    height: 100vh;;
+    /*margin:0;
+    padding: 0;*/
+}
+.box{
+    background-color: bisque;
+    width: 50%;
+    height: 50%;
+}
+.red{
+    background-color: brown;
+}
+img{
+    float:left;
+    border: 3px, solid;
+
+}
