@@ -69,3 +69,5 @@ for (var index = 0; index < listaSpesa.length; index++) {
 elSpesa.innerHTML+=elenco;
 var elTotale=document.getElementById('totale');
 elTotale.innerHTML="Il totale della spesa è € "+somma;
+
+
