@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;
+    font-size: 1.0rem;
+    font-family: 'Oxygen', sans-serif;
+}
+h3,h4{
+    font-family: 'Open Sans Condensed', sans-serif;
+
+}
+h3{
+    font-size: 1.5rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+
+body{
+    width: 100%;
+}
+a{ 
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+a:visited{
+    color: inherit;
+}
+ul{
+    list-style: none ;
+
+}
+
+
+.mainHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+}
+.mainHeader ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+}
+.logo{
+    width: 39%;
+    display: flex;
+    justify-content: center;
+}
+.logo>img{
+    width: 10rem;
+}
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 
+
+    
+}
+.white{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.sideImg{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    order:1;
+    
+}
+.sideImg>img{
+    width: 100%;
+}
+.sideSection{
+    width: 50%;
+    order: 1;
+}
+.sideSection a{
+    background-color: #CB2525;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+.white:nth-child(even) .sideImg{
+    order:2;
+}
+#destra{ 
+    text-align: right;    
+}
+.red{
+    background-color: #CB2525;
+    display: flex;
+
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 5rem;
+    
+
+    
+}
+.redSection{
+    width: 30%    
+}
+.redSection .img{
+    width: 100%;
+    
+}
+.redSection .img img{
+    width: 100%;
+    padding: 1rem;
+}
+.redSection>.textSection{
+    color: white;
+    padding: 0 0.5rem;
+    font-display: center;
+    text-align: center;
+}
+.mainFooter{
+    background-color: rgb(37, 37, 37);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.mainFooter>ul{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.gallery{
+    width: 100%;
+    background-color: #CB2525;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-style: italic;
+    font-size: 0.6rem;
+    padding: 1rem 3rem;
+}
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 2rem;
+    align-items: center;   
+}
+.item{
+    width: 30%;
+}
+.el{
+    width: 100%;
+}
+.el > img{
+    width: 100%;
+}
+.rowHero{
+    height: 33%;
+    width: 100%;
+}
+.rowHero img{
+    height: 100%;
+    width: 100%;
+
+}

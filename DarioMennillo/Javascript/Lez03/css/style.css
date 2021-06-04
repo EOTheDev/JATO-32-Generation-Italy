@@ -1,0 +1,21 @@
+body{
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+button{
+    margin: 0.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: red;
+    border-color: rgb(255, 44, 44);
+    border-radius: 4rem;
+}
+button:nth-of-type(even){
+    background-color: green;
+    border-color: greenyellow;
+    color:white ;
+}
