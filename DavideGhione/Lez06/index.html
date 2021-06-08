@@ -13,8 +13,39 @@
         <input type="password">
         <input type="number" name="" id="">
         <input type="email" name="" id="">
-        <input type="radio" name="pillola" value="rossa">
-        <input type="radio" name="pillola" value="blue">
+        <div class="option">
+            <input type="radio" id="#rossa" name="pillola" value="rossa">
+            <label for="rossa">Pillola rossa</label>
+        </div>
+        <div class="option">
+            <input type="radio" id="blu"name="pillola" value="blue">
+            <label for="blu">Pillola blue</label>
+        </div>
+            <div class="optional">
+                <input type="checkbox" name="autoradio" id="autoradio" value="si">
+                <label for="autoradio">autoradio</label>
+            </div>
+            <div class="optional">
+                <input type="checkbox" name="cerchi" id="cerchi" value="si">
+                <label for="cerchi">cerchi</label>
+            </div><div class="optional">
+                <input type="checkbox" name="clima" id="clima" value="si">
+                <label for="clima">clima</label>
+            </div>
+            <label for="car">Scegli la tua macchina preferita</label>
+            <select name="veicolo" id="car">
+                <option value="-"> Scegli</option>
+                <option value="fiat"> Fiat</option>
+                <option value="audi"> Audi</option>
+                <option value="bmw"> BMW</option>
+                <option value="Seat"> Seat</option>
+            </select>
+            <label for="messaggio">Scrivi qua il tuo messaggio</label>
+          <textarea name="messaggio" id="messaggio" cols="30" rows="10" placeholder="Ciao, belli!">
+            
+          </textarea>
+        
+        <input type="submit" value="Procedi">
     </form>
 
 
