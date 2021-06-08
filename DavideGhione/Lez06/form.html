@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>form</title>
+</head>
+<body>
+    <h1>Form di esempio</h1>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>Dati Anagrafici</legend>
+            <div class="formItem">  
+                <label for="nc">Nome e cognome</label>
+                <input type="text" name="nomecognome" id="nc"placeholder="Mario Rossi" readonly>
+            </div>
+            
+            <div class="formItem">
+                <label for="regione">Inserisci la regione di appartenenza</label>
+                <select name="regione" id="regione">
+                    <option value="no-selection">Seleziona</option>
+                    <option value="piemonte">Piemonte</option>
+                    <option value="liguria">Liguria</option>
+                    <option value="valdaosta">Valle d'Aosta</option>
+                    <option value="lombardia">Lombardia</option>
+                    <option value="toscana">Toscana</option>
+                </select>
+            </div>
+            <div class="formItem">
+                <p>Sesso:</p>
+                <div class="sesso">
+                    <div class="formItem">
+                        <input type="radio" id="m" name="sesso" value="m">
+                        <label for="m">Maschio</label>
+                    </div>
+                    <div class="formItem">
+                        <input type="radio" id="f" name="sesso" value="f">
+                        <label for="f">Femmina</label>
+                    </div>
+                    <div class="formItem">
+                        <input type="radio" id="o" name="sesso" value="o" checked>
+                        <label for="o">Nessuno dei precedenti</label>
+                    </div>
+                    
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Contatti</legend>
+            <div class="formItem">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="mariorossi@email.it">
+            </div>
+            <div class="formItem">
+                
+                <label for="telefono">Numero di cellulare</label>
+                <input type="tel"name="telefono"id="telefono" pattern="[0-9]{7,8,9,10}"placeholder="3333333333">
+            </div>
+        </fieldset>
+        <fieldset id="account">
+            <legend>Account personale</legend>
+            <div class="formItem">
+                <label for="un">Username</label>
+                <input type="text" name="username" id="un"placeholder="MarioTheStrawberriesKill3r">
+            </div>
+            <div class="formItem">
+                <label for="bio">Raccontaci di te</label>
+                <textarea name="bio" id="bio" placeholder="Descriviti"></textarea>
+            </div>
+            <div class="formItem">
+                <p>I tuoi hobby preferiti:</p>
+                <div class="formItem">
+                    <input type="checkbox" name="hobby" id="fotografia" value="fotografia">
+                    <label for="foto">Fotografia</label>
+                </div>
+                <div class="formItem">
+                    <input type="checkbox" name="hobby" id="ciclismo" value="ciclismo">
+                    <label for="ciclismo">Ciclismo</label>
+                </div>
+                <div class="formItem">
+                    <input type="checkbox" name="hobby" id="vg" value="videogames">
+                    <label for="vg">Videogames</label>
+                </div>
+            </div>
+
+
+
+
+            <div class="formItem">
+                <p>I tuoi piatti preferiti:</p>
+                <div class="formItem">
+                    <input type="checkbox" name="piatto" id="pizza" value="pizza">
+                    <label for="pizza">Pizza</label>
+                </div>
+                <div class="formItem">
+                    <input type="checkbox" name="piatto" id="kebab" value="kebab">
+                    <label for="pizza">Kebab</label>
+                </div>
+                <div class="formItem">
+                    <input type="checkbox" name="piatto" id="sushi" value="sushi">
+                    <label for="pizza">Sushi</label>
+                </div>
+            </div>
+        </fieldset>
+        <div class="formItem">
+            <input type="checkbox" name="condizioni" id="conditions" value="si" required >
+            <label for="conditions">Accetto le condizioni di utilizzo</label>
+        </div>
+        <input type="hidden" name="browser" value="chrome">
+
+        <input type="submit">
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
