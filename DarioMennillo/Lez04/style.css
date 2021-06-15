@@ -1,0 +1,14 @@
+#inSala{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* .filmContainer{
+    display: flex;
+    flex-direction: column;
+} */
+li{
+    list-style: none;
+}
+li img{
+    height: 445px;
+}
