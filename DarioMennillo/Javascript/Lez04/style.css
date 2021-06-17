@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 #inSala{
     display: flex;
     flex-wrap: wrap;
@@ -14,6 +17,7 @@ li img{
 }
 #caroselloWrapper{
     display: flex;
+    flex-wrap: nowrap;
     background-color: rgb(15, 2, 2);
     justify-content: space-between;
     align-items: center;
@@ -29,9 +33,17 @@ li img{
     margin: 3rem;
     text-transform: uppercase;
 }
+#caroselloWrapper>div img{
+    /* height: 66vh;
+    width: 50vh; */
+}
 #caroselloWrapper>#carosello{
-    flex-basis: 40%;
+    flex-basis: 39%;
     height: 100%;
+}
+#caroselloWrapper>#carosello img{
+    /* height: 80vh;
+    width: 60vh; */
 }
 input{
     padding: 1rem 5rem;
