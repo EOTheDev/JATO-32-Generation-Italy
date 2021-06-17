@@ -47,7 +47,7 @@ function load() {
     }
     var film=JSON.parse(filmArray[indice]);
     /*Stampa carosello centrale */
-    caroselloC.innerHTML='<h1>'+film.Title+'</h1><img src="'+film.Poster+'"><h2>Main Cast</h2><p>'+film.Actors+'</p>';
+    caroselloC.innerHTML='<h1 class="animate__animated animate__bounceInDown">'+film.Title+'</h1><img class="animate__animated animate__bounceInDown" src="'+film.Poster+'"><div class="animate__animated animate__bounceInUp"><h2>Main Cast</h2><p>'+film.Actors+'</p></div>';
     
     /*Stampa carosello sinistro */
     var indiceLeft;
@@ -56,13 +56,43 @@ function load() {
     } else{
         indiceLeft=indice-1;
     }
-    caroselloL.innerHTML='<h1>'+film.Title+'</h1><img src="'+film.Poster+'"><button class="caroselloButton" onclick="cambia(-1)">Precedente</button>';
+    var filmL=JSON.parse(filmArray[indiceLeft]);
+    caroselloL.innerHTML='<h1 class="animate__animated animate__bounceInLeft">'+filmL.Title+'</h1><img class="animate__animated animate__bounceInLeft" src="'+filmL.Poster+'"><button class="caroselloButton" onclick="cambia(-1)">Precedente</button>';
     
     /*Stampa carosello destro */
-    
-    caroselloR.innerHTML='<h1>'+film.Title+'</h1><img src="'+film.Poster+'"><button class="caroselloButton" onclick="cambia(1)">Successivo</button>';
+    var indiceRight;
+    if(indice+1>=filmArray.length){
+        indiceRight=0;
+    } else{
+        indiceRight=indice+1;
+    }
+    var filmR=JSON.parse(filmArray[indiceRight]);
+    caroselloR.innerHTML='<h1 class="animate__animated animate__bounceInRight">'+filmR.Title+'</h1><img class="animate__animated animate__bounceInRight" src="'+filmR.Poster+'"><button class="caroselloButton" onclick="cambia(1)">Successivo</button>';
     
 }
+/* cambia(incremento) scorre il carosello*/
+function cambia(incremento) {
+    indice=indice+incremento;
+    load();
+}
+ 
+
+/* flipIt flippiamo l'immagine per essere più interattivi */
+function flipIt() {
+    if (indice<0) {
+        indice=filmArray.length-1;
+    } else if (indice>=filmArray.length){
+        indice=0;
+    }
+    var film=JSON.parse(filmArray[indice]);
+    /*Stampa carosello centrale */
+    caroselloC.innerHTML='<h1 class="animate__animated animate__zoomOutDown">'+film.Title+'</h1><img class="animate__animated animate__zoomOutDown" src="'+film.Poster+'"><div class="animate__animated animate__zoomOutDown"><h2>Main Cast</h2><p>'+film.Actors+'</p></div>';
+    setTimeout(() => { caroselloC.innerHTML="<div class='animate__animated animate__fadeInDownBig'><h1>OH NO,</h1><h2>YOU BROKE</h2><h1>IT!</h1></div>"; }, 1000);
+    setTimeout(() => { caroselloC.innerHTML="<div class='animate__animated animate__flash'><h1>OH NO,</h1><h2>YOU BROKE</h2><h1>IT!</h1></div>"; }, 1000);
+} 
+
+        
+    
 
 
 

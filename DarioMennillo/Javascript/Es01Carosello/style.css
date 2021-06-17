@@ -8,6 +8,9 @@
     justify-content: space-evenly;
     color:rgb(204, 237, 244);
 }
+#center div{
+    width: 70%;
+}
 .caroselloSide{
     flex-basis: 30%;
     display: flex;
