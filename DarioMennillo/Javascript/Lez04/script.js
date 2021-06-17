@@ -28,8 +28,10 @@ immagine.innerHTML='<img src="'+filmOBJ.Poster+'" alt=""></img>';
 
 var inSala= document.getElementById("inSala");
 
-for (let index = 0; index < films.length; index++) {
-    var filmsO=JSON.parse(films[index]);
+
+for (let ind = 0; ind < films.length; ind++) {
+    var filmsO=JSON.parse(films[ind]);
+    console.log(ind);
    //inSala.innerHTML+="<div>";
    //inSala.innerHTML+="<div class='filmContainer'>";
     inSala.innerHTML+="<li><h1>"+filmsO.Title+'</h1><img src="'+filmsO.Poster+'" alt=""></li>';
@@ -40,21 +42,67 @@ for (let index = 0; index < films.length; index++) {
 
 
 //inizio carosello
-var index=0;
+var indexCenter=0;
+var indexLeft=films.length-1;
+var indexRight=1;
 var carosello=document.getElementById("carosello");
+var caroselloLeft=document.getElementById("caroselloLeft");
+var caroselloRight=document.getElementById("caroselloRight");
+
 
 
 // carica()
 // https://animate.style/
 
+function caricaAll(){
+    
+        /*carica center */
+        if (indexCenter>=films.length) {
+            indexCenter=0;        
+        } else if(indexCenter<0) {
+            indexCenter=films.length-1;        
+        }
+        var filmsCenter= JSON.parse(films[indexCenter]);
+        carosello.innerHTML="<h1>"+filmsCenter.Title+'</h1><img class="animate__animated animate__bounce" src="'+filmsCenter.Poster+'" alt="">';
+    
+    
+        /* Carica Left */
+        if (indexLeft>=films.length) {
+            indexLeft=0;
+        }else if (indexLeft<0){
+            indexLeft=films.length-1;
+        }
+        var filmsLeft=JSON.parse(films[indexLeft]);
+        caroselloLeft.innerHTML="<h1>"+filmsLeft.Title+'</h1><img class="animate__animated animate__backInRight" src="'+filmsLeft.Poster+'" alt="">';
+        caroselloLeft.innerHTML+='<input type="button" value="precedente">';
+        
+        
+        
+        /*Carica Right */
+        
+        
+        if (indexRight>=films.length) {
+            indexRight=0;
+        } else if (indexRight<0){
+            indexRight=films.length-1;
+        }
+        var filmsRight=JSON.parse(films[indexRight]);
+        caroselloRight.innerHTML="<h1>"+filmsRight.Title+'</h1><img class="animate__animated animate__backInRight" src="'+filmsRight.Poster+'" alt="">';
+        caroselloRight.innerHTML+='<input type="button" value="successivo">';
+}
 
 
-function cambiaFilm(index) {
-    if (index>=films.length) {
-        index=0;
-    }
-    var filmsO=JSON.parse(films[index]);
-    carosello.innerHTML+="<h1>"+filmsO.Title+'</h1><img src="'+filmsO.Poster+'" alt="">';
-    index=index+1;
+function cambiaFilm() {
+    indexCenter=indexCenter+1;
+    indexLeft=indexLeft+1;
+    indexRight=indexRight+1;
+    caricaAll();
+}
+
+function cambiaFilmBack() {
+    indexCenter=indexCenter-1;
+    indexLeft=indexLeft-1;
+    indexRight=indexRight-1;
+    caricaAll();
 }
 

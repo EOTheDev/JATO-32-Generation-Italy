@@ -1,0 +1,41 @@
+#inSala{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* .filmContainer{
+    display: flex;
+    flex-direction: column;
+} */
+li{
+    list-style: none;
+}
+li img{
+    height: 445px;
+}
+#caroselloWrapper{
+    display: flex;
+    background-color: rgb(15, 2, 2);
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    
+   
+}
+#caroselloWrapper>div{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    max-height: 80%;
+    margin: 3rem;
+    text-transform: uppercase;
+}
+#caroselloWrapper>#carosello{
+    flex-basis: 40%;
+    height: 100%;
+}
+input{
+    padding: 1rem 5rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: brown;
+}
