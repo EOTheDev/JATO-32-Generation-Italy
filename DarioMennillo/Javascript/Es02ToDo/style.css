@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(0, 0, 30);
+} 
+ 
+#toDoWrapper{
+    background-color: rgb(42, 42, 107);
+    padding: 1rem;
+    height: 90vh;
+    display: flex;
+}
+.listWrapper{
+    padding: 1rem;
+    margin: 1rem;
+    background-color: rgb(159, 159, 230);
+}
