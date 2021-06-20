@@ -3,26 +3,41 @@ var toDoWrapper= document.getElementById("toDoWrapper");
 var whatsInTheHtml="";
 
 
-function toDoList(titolo){
-    this.titolo=titolo;
-    this.tasks=["Task 1", "task 2", "task3"],
+function toDoList(title){
+    this.titolo=title;
+    this.tasks=["lorem ipsum dolor sit amet consectur","Lorem ipsum"];
     
-    this.addTask(newTask)= function() {
+    this.addTask = function(newTask) {
          this.tasks.push(newTask);
     }
     
 }
-var lists=[new toDoList("titolo uno"), new toDoList("titolo 2"), new toDoList("titolo tre")]
+var lists=[ new toDoList("arguments test")]
 
 function load() {
+    whatsInTheHtml="";
     for (let index = 0; index < lists.length; index++) {
-        whatsInTheHtml+='<div class="listWrapper" id="toDoList'+index+'"><h2 class="listTitle">'+lists[index]+'</h2><ul>';
+        whatsInTheHtml+='<div class="listWrapper" ><h2 class="listTitle">'+lists[index].titolo+'</h2><ul>';
         for (let indiceLi = 0; indiceLi <lists[index].tasks.length; indiceLi++) {
-            whatsInTheHtml+='<li><input type="checkbox"  onchange="getDone()">'+elemento lista+'</li>';
+            whatsInTheHtml+='<li><input type="checkbox"  onchange="getDone()">'+lists[index].tasks[indiceLi]+'</li>';
         }
-        whatsInTheHtml+='</ul><input type="text" placeholder="new task"><button class="+" onclick="newToDo('+index+')">+</button></div>';        
+        whatsInTheHtml+='</ul><div class="addWrapper"><input id="toDoList'+index+'" type="text" placeholder="new task"><button class="add" onclick="newToDo('+index+')">add</button></div></div>';        
     }
-    whatsInTheHtml+='<div class="listWrapper"><input class="+" type="text" placeholder="new list"><button onclick="newList()">+</button></div>'
+    whatsInTheHtml+='<div class="listWrapper"><div class="addWrapper"><input  id="newList" type="text" placeholder="new list"><button class="add" onclick="newList()">add</button></div></div>'
     toDoWrapper.innerHTML=whatsInTheHtml;
 }
 
+function newToDo(indiceLista) {
+    var toDo=document.getElementById("toDoList"+indiceLista).value;    
+    if (toDo!=""){
+        lists[indiceLista].addTask(toDo);
+        load();
+    }
+}
+function newList() {
+    var title=document.getElementById("newList").value;
+    if (title!=""){
+        lists.push(new toDoList(title));
+        load();
+    }
+}
