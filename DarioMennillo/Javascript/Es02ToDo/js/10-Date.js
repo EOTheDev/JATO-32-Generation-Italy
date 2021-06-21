@@ -1,3 +1,6 @@
+/** @author Edoardo Orta */
+
+
 var toDoWrapper= document.getElementById("toDoWrapper");
 
 var whatsInTheHtml="";
