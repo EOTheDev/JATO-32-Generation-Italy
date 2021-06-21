@@ -1,1 +1,1 @@
-select * FROM impiegato
+select * FROM editore
