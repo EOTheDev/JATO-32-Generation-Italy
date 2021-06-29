@@ -1,4 +1,12 @@
-/** @author Edoardo Orta */
+/** @author Edoardo Orta
+ * backdrop-filter: blur( nPXdiSfocatura)
+ * https://mycolor.space/gradient
+ * https://www.colorzilla.com/gradient-editor/
+ * https://html-css-js.com/css/generator/box-shadow/
+ * https://coolors.co/
+ * https://color.adobe.com/it/
+ * fontjoy.com
+ */
 
 
 var toDoWrapper= document.getElementById("toDoWrapper");
