@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form action="https://www.example.org" method="get"></form>
+    <div id="feedback"></div>
+    <form action="https://www.example.org" name="fUtente" method="get" id="formUtente">
+        
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nomeUtente">
+        
+        <label for="cognome">cognome</label>
+        <input type="text" name="cognome" id="cognomeUtente">
+        
+        <label for="email">email</label>
+        <input type="email" name="email" id="emailUtente">
+        
+        <label for="cF">Codice Fiscale</label>
+        <input type="text" name="cF" id="cFUtente">
+
+        <select name="nazionalita" id="nazionalita">
+            <option value="select"> seleziona nazionalità </option>
+            <option value="italia"> italia </option>
+            <option value="germania"> germania </option>
+            <option value="romania"> romania </option>
+            <option value="spagna"> spagna </option>
+
+        </select>
+        <br>
+        <textarea name="tweet" id="tweet" cols="10" rows="6" placeholder="Twetta qui"></textarea>
+
+        <input type="submit">
+    </form> 
+    <div id="carRes"></div>
+
+
+<button id="btn">Clicca</button>
+<script src="js.js"></script>
+</body>
+</html>
