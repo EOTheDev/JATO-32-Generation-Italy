@@ -1,0 +1,129 @@
+/*roba che non centra col cv*/
+body{
+    background-color: black;
+}
+/*fine roba che non centra*/
+*{
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --pmColor:#96bf91; 
+    --scColor:#489bfa;
+}
+
+/*Architettura di base*/
+#cv{
+    font-family: 'Vollkorn', serif;
+    display: flex;
+    max-height: 297mm;
+    width: 210mm;
+    overflow: hidden;
+    background-color: white;
+}
+#headerCV{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#headerCV img{
+    width: 30mm;
+    margin: 1rem;
+}
+.sidebar{
+    width: 80mm;
+    background-color:var(--pmColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebar>div{
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    
+}
+.sidebar .hr{
+    border-top: 1rem white solid;
+}
+.mainCV{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+
+}
+.hr{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-top: 5px var(--pmColor) solid;
+}
+.experience{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.experience>.jobDescription{
+    flex-basis: 50%;
+    text-align: center;
+    margin: 0 2rem;
+
+}
+.experience>.periodo{
+    flex-basis: 40%;
+    text-align: right;
+}
+.title h4, .title p{
+    display: inline-block;
+}
+#footerCV{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#signature{
+    height: 15mm;
+}
+/*Gestione dimensione caratteri e stile*/
+h1{
+    font-size: 36px;
+    font-weight: bold;
+}
+h2{
+    font-size: 24px;
+    color: var(--scColor);
+    
+}
+h3{
+    font-size: 18px;
+    font-weight: bold;
+}
+h4{
+    font-size: 14px;
+    font-weight: bold;
+}
+h5{
+    font-size: 12px;
+    font-weight: bold;
+}
+h6{
+    font-size: 12px;
+}
+.jobDescription p, #aboutMe p, #shortDescription{
+    font-size: 12px;
+}
+p{
+    font-size: 11px;
+    font-family: 'Raleway', sans-serif;
+}
+.periodo{
+    font-size: 10px;
+}
+#privacy{
+    font-size: 9px;
+    font-style: italic;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin-top: 0.5rem;
+}
+
+/*Gestione stile*/
