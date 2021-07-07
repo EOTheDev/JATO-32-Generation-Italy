@@ -27,8 +27,8 @@ body{
     align-items: center;
 }
 #headerCV img{
-    width: 30mm;
-    margin: 1rem;
+    height: 60px;
+    margin: 0;
 }
 .sidebar{
     width: 80mm;
@@ -38,11 +38,17 @@ body{
     justify-content: space-between;
 }
 .sidebar>div{
-    padding: 0 0.5rem 0.5rem 0.5rem;
-    
+    padding: 0 0.5rem 0.5rem 0.5rem;   
+}
+.brcolored{
+    border-right: 5px var(--pmColor) solid;
+    border-radius: 1rem;
+}
+.sidebar img{
+    margin-bottom: 0.5rem;
 }
 .sidebar .hr{
-    border-top: 1rem white solid;
+    border-top: 0.5rem white solid;
 }
 .mainCV{
     display: flex;
@@ -51,6 +57,7 @@ body{
     padding: 0 0.5rem;
 
 }
+
 .hr{
     width: 100%;
     margin: 0;
@@ -112,14 +119,14 @@ h6{
     font-size: 12px;
 }
 p{
-    font-size: 11px;
+    font-size: 11.5px;
     font-family: 'Raleway', sans-serif;
 }
 .periodo{
-    font-size: 10px;
+    font-size: 10.5px;
 }
 #privacy{
-    font-size: 9px;
+    font-size: 9.5px;
     font-style: italic;
 }
 h1,h2,h3,h4,h5,h6,p{
