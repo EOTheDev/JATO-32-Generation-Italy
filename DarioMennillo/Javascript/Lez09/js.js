@@ -1,3 +1,10 @@
+// https://isotope.metafizzy.co/
+// https://www.chartjs.org/
+// https://momentjs.com/docs/
+// https://www.chartjs.org/docs/latest/samples/area/radar.html
+// https://getbootstrap.com/docs/4.0/getting-started/introduction/
+
+
 var btnIns = document.getElementById("btnIns");
 var feedback = document.getElementById("feedback");
 var item=document.getElementById("item");
