@@ -12,9 +12,9 @@ var viaggio2={
 }
 var viaggi= [viaggio, viaggio2];
 var viaggiHTML=document.getElementById("travelsContainer");
-viaggiHTML.addEventListener("load",carica, false);
-function carica() {
-
+// viaggiHTML.addEventListener("load",carica, false);
+// function carica() {
+    console.log("ciao");
     for (let index = 0; index < viaggi.length; index++) {
         const element = viaggi[index];
         console.log(element.destinazione);
@@ -25,7 +25,7 @@ function carica() {
         
         var titleHTML=document.createElement("h2");
         titleHTML.setAttribute("class", "title");
-        travelHTML.innerHTML="pazza";
+        titleHTML.innerHTML="pazza";
 
 
         var destinazioneHTML =document.createElement("span");
@@ -39,6 +39,6 @@ function carica() {
         
     }
 
-}
+// }
 
-   
+//    carica();
