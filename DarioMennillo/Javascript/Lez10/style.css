@@ -1,0 +1,9 @@
+#lampadina{
+    height: 400px;
+    background-repeat: no-repeat;
+    background-image: url("img/spenta.jpg");
+    background-size: contain;
+}
+#lampadina.accesa{
+    background-image: url("img/accesa.jpg");
+}
