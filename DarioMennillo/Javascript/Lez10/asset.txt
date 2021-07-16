@@ -1,0 +1,17 @@
+{
+    "nome":"virgilio",
+    "cognome":"Collura",
+    "materie":["Js","Java","html","db"],
+    "materiale":[
+        {
+            "tipo":"pc",
+            "modello":"dell",
+            "SO":"windows"
+        },
+        {
+            "tipo":"zaino",
+            "modello":"invicta"
+            "SO":"null"
+        }
+        ]
+}
