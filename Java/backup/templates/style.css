@@ -1,0 +1,77 @@
+.container{
+    width: 80%;
+    padding-top: 5%;
+    margin-left: 10%;
+}
+.travel{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+}
+.testo{
+    flex-basis: 70%;
+}
+.side{
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.side img{
+    width: 100%;
+}
+.side button{
+    border-radius: 0.5rem;
+}
+.btns{
+    /* display: flex; */
+}
+#acquista{
+    width: 100%;
+}
+
+.casellaForm{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+}
+.email{
+    flex-basis: 100%;  
+}
+.cc{
+    flex-basis: 25%;
+}
+.flex-hr{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex-hr .casellaForm{
+    flex-basis: 5%;
+}
+.importo{
+    flex-basis: 50%;
+}
+.flank{
+    display: flex;
+    align-items: center;
+}
+#travelDescription{
+    text-align: justify;
+}
+#qr{
+    height: fit-content;
+}
+#login{
+    padding: 1rem 2rem;
+    font-weight: bold;
+
+}
+.loginForm{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
