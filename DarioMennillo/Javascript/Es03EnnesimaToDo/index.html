@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
+</head>
+<body>
+    <form action="https://www.example.org" method="GET" class="col-8 mx-auto py-5">
+    <input type="text" class="form-control " placeholder="inserisci qui" id="item"> 
+    <button id="btn" class="btn btn-primary my-4"> inserisci </button>
+    </form>
+
+    <div id="lista" class="col-8 mx-auto">
+
+    </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    //Aggiunta alla lista
+    
+    //pulsante elimina
+    //pulsante modifica
+    //click su item -> barrato
+       
+    $('#btn').on('click', function(){
+        event.preventDefault();
+        var item = $('#item').val();
+        if(item == ''){
+            
+        } else {
+            console.log(item);
+            var li=$("<li></li>").text(""+item);
+            li.after($("<button></button>").text("X"));
+            $("#lista").append(li);
+        
+        }
+    })
+
+</script>
+
+</body>
+</html>

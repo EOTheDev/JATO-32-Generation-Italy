@@ -82,6 +82,11 @@ body{
 .title h4, .title p{
     display: inline-block;
 }
+#hobbyFlex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 #footerCV{
     display: flex;
     justify-content: space-between;
