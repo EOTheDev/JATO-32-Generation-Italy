@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aac51cdb-3716-4026-9a1e-187b613d5cf9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DavideGhione/Lez09/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DarioMennillo/UML/Lez0/cv/cv.css" beforeDir="false" afterPath="$PROJECT_DIR$/DarioMennillo/UML/Lez0/cv/cv.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DarioMennillo/UML/Lez0/cv/cvIt.html" beforeDir="false" afterPath="$PROJECT_DIR$/DarioMennillo/UML/Lez0/cv/cvIt.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softskill/Curriculum Vitae di Edoardo Orta in italiano.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Softskill/Curriculum Vitae di Edoardo Orta in italiano.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Softskill/English Curriculum Vitae of Edoardo Orta.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Softskill/English Curriculum Vitae of Edoardo Orta.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,5 +89,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

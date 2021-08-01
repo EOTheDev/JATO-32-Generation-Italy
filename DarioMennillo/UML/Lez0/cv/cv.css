@@ -30,6 +30,14 @@ body{
     height: 60px;
     margin: 0;
 }
+#fotoCV{
+    position: relative;
+    left: 5%;
+    width: 90%;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    padding: 0 0rem;
+}
 .sidebar{
     width: 80mm;
     background-color:var(--pmColor);
