@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+:root{
+    --main-color: rgb(255, 255, 255);
+    --secondary-color:rgb(137, 137, 255);
+    --main-blue-color:#01022c;
+    --main-font:'Manrope', sans-serif;
+
+
+}
+
+$maincolor: var(--main-color);
+$secondarycolor: var( --secondary-color);
+$mainbluecolor: var(--main-blue-color);
+
+$mainfont: var(--main-font);
+
+
+// navbar
+nav{
+    background-color: $mainbluecolor;
+    h4{
+        color: $maincolor;
+        font-size: 3vw;
+    }
+}
+
+
+
+
+// fine navbar
+#globe{
+    height: 50vh;
+}
+main{
+    font-family: $mainfont;
+    background: rgb(2,1,19);
+    background: linear-gradient(90deg, rgba(2,1,19,1) 0%, rgba(0,0,65,1) 50%, rgba(2,3,8,1) 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+#stars{
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: absolute;
+    width: 100vw;
+}
+.mainTitle{
+    font-weight: 600;
+    color: $maincolor;
+}
+.subtitle {
+    font-weight: 500;
+    color: $secondarycolor;
+}
